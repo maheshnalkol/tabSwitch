@@ -3,17 +3,16 @@
 <div class="header alert-success">
     <div class="row">
         <div class="col-md-6 offset-md-3 col-sm-6 offset-sm-3">
-            <ul class="nav nav-pills p-2">
+            <ul class="nav nav-pills bg-info p-2">
                 <li 
                 (click)="onChangeSkill(skill.skillName)"
                 *ngFor="let skill of skillArray"
-                class="nav-item flex-grow-1">
+                class="nav-item text-center flex-grow-1">
                     <a 
                     [ngClass]="{
-                        'active':selectionOfskill.toLowerCase().includes(skill.skillName),
-                        'text-white':selectionOfskill.toLowerCase().includes(skill.skillName)
+                        'activeC':selectionOfskill.toLowerCase().includes(skill.skillName)
                     }"
-                    href="javascript:;" class="text-dark nav-link">
+                    href="javascript:;" class="text-white nav-link">
                         {{skill.skillName}}
                     </a>
                 </li>
