@@ -1,0 +1,32 @@
+<p class="alert alert-info text-center">Ng If</p>
+
+<header class="header alert-warning">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="navbar d-flex">
+                <ul class="nav nav-pills bg_color flex-grow-1">
+                    <li 
+                    *ngFor="let skill of skillArr"
+                    (click)="onClickSkill(skill.skillName)"
+                    class="nav-item flex-grow-1 ">
+                        <a
+                        [ngClass]="{
+                            'active':selectedskill.toLowerCase().includes(skill.skillName)
+                        }"
+                        href="javascript:;" class="text-white nav-link">{{skill.skillName}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <ng-container
+    *ngFor="let skill of skillArr"
+    class="tab-body">
+        <div class="card" 
+        *ngIf="selectedskill.toLowerCase().includes(skill.skillName)"> 
+        <div class="card-body" [innerHTML]="skill.skillInfo">
+                
+            </div>
+        </div>
+    </ng-container>
