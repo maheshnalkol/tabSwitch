@@ -10,7 +10,7 @@ import { skillData } from '../../constants/Ifswitch';
 export class IfTabComponent implements OnInit {
 
   skillArr:Array<Itabs>=skillData;
-  selectedskill:string="html"
+  selectedskill:string=this.skillArr[0].skillName
   constructor() { }
 
   ngOnInit(): void {

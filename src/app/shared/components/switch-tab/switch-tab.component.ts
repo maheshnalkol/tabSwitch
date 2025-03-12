@@ -11,7 +11,7 @@ export class SwitchTabComponent implements OnInit {
 
   skillArray:Array<Itabs>=skillData
 
-  selectionOfskill:string='html'
+  selectionOfskill:string=this.skillArray[0].skillName
 
   constructor() { }
 
