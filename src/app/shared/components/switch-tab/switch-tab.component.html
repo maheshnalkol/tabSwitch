@@ -2,7 +2,7 @@
 
 <div class="header alert-success">
     <div class="row">
-        <div class="col-md-6 offset-3">
+        <div class="col-md-6 offset-md-3 col-sm-6 offset-sm-3">
             <ul class="nav nav-pills p-2">
                 <li 
                 (click)="onChangeSkill(skill.skillName)"
@@ -19,7 +19,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-6 offset-3">
+        <div class="col-md-6 offset-md-3 col-sm-6 offset-sm-3">
             <ng-container 
             [ngSwitch]="selectionOfskill"
             *ngFor="let skill of skillArray"
